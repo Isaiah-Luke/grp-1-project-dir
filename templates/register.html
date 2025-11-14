@@ -1,54 +1,33 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link a="stylesheet." href="static\register.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Register</h2>
+<div class="container">
+    <h2>Register</h2>
 
-<form>
-    <label>Username</label>
-    <input id="username" type="text" placeholder="Enter username" required><br><br>
+    <form>
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" required>
 
-    <label>Email</label>
-    <input id="email" type="email" placeholder="Enter email" required><br><br>
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" required>
 
-    <label>Password</label>
-    <input id="password" type="password" placeholder="Create password" required><br><br>
+        <label>Password</label>
+        <input type="password" placeholder="Create password" required>
 
-    <label>Confirm Password</label>
-    <input id="confirm" type="password" placeholder="Confirm password" required><br><br>
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password" required>
 
-    <button type="button" onclick="registerUser()">Register</button>
-</form>
+        <button type="submit">Register</button>
 
-<p>Already have an account? <a href="login.html">Login</a></p>
-
-<script>
-function registerUser() {
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var confirm = document.getElementById("confirm").value;
-
-    if(password !== confirm){
-        alert("Passwords do not match!");
-        return;
-    }
-
-    localStorage.setItem("username", username);
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-
-    alert("Registration successful!");
-
-    window.location.href = "login.html";
-}
-</script>
+        <p style="margin-top:10px;">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+</div>
 
 </body>
 </html>
